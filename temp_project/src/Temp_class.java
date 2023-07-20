@@ -35,6 +35,15 @@ public class Temp_class extends JFrame implements ActionListener {
             System.out.println(checkBox.isSelected());
         }
     }
+
+    ActionListener comboBoxAction = new ActionListener() {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            JComboBox source = (JComboBox) actionEvent.getSource();
+            String selectItem = (String) source.getSelectedItem();
+            textArea.setText(selectItem);
+        }
+    };
     Temp_class(){
 
         this.setSize(500,500);
@@ -66,6 +75,7 @@ public class Temp_class extends JFrame implements ActionListener {
         list.setBorder(BorderFactory.createLineBorder(Color.BLACK, 1, true));
         list.setVisibleRowCount(3);
         dropDown.setBorder(BorderFactory.createLineBorder(Color.red, 2, false));
+        dropDown.addActionListener(comboBoxAction);
 
         panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         panel.add(textArea);
