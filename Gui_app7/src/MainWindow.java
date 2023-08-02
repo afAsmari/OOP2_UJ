@@ -17,6 +17,8 @@ public class MainWindow extends JFrame {
     JMenuItem aboutItem;
     JPanel panel;
     JFileChooser fileChooser = new JFileChooser();
+
+    JButton button = new JButton("click");
     MainWindow(){
         // main configuration
         this.setSize(390,200);
@@ -58,9 +60,10 @@ public class MainWindow extends JFrame {
         menuBar.add(fileMenu);
         menuBar.add(editMenu);
         menuBar.add(aboutMenu);
+        button.setToolTipText("this is a button");
 
         panel.add(menuBar);
-
+        panel.add(button);
 
         this.add(panel);
 
