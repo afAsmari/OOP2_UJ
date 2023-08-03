@@ -1,6 +1,7 @@
 package org.example.views;
 
 import org.example.Context;
+import org.example.serveces.crud.Auth_service;
 
 import javax.swing.*;
 import java.awt.*;
@@ -73,7 +74,28 @@ public class LoginWindow extends JFrame {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             //TODO validation
-            //TODO AUTHENTICATION
+            String email = emailTextField.getText();
+            String password = passwordTextField.getText();
+            if(!email.contains("@") || !email.contains("."))
+                new ExceptionWindow("please write a valid email");
+            else if(email.contains("'") || email.contains("\"") || email.contains(";") || email.contains("%") || email.contains("_"))
+                new ExceptionWindow("please write a valid email");
+            else if(password.length() < 8)
+                new ExceptionWindow("Password must be more than 8 characters");
+            else if(password.length() > 30)
+                new ExceptionWindow("password must be less than 30 characters");
+            else{
+                //TODO AUTHENTICATION
+                boolean loggedIn = Auth_service.login(email, password);
+                if(!loggedIn)
+                    new ExceptionWindow("Email or password is wrong");
+                else{
+                    LoginWindow.this.dispose();
+                    new MainWindow();
+                }
+
+
+            }
         }
     }
 }

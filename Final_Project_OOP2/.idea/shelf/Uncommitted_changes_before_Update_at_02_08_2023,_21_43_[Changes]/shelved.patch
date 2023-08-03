@@ -1,0 +1,85 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"9221bfc6-c48d-4364-9780-a603184b6923\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/compiler.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/encodings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/jarRepositories.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_42_0_0.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/pom.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/databases/hospital.db\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Constants/arr.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Context.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/Main.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/serveces/crud/ContextRetriever.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/serveces/crud/DatabaseHandler.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/serveces/crud/insertOrUpdateQueriesBuilder.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/views/CheckInWindow.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/views/LoginWindow.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/views/MainWindow.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/views/SettingsWindow.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/src/main/java/org/example/views/healthConditionsWindow.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/Final_Project_OOP2-1.0-SNAPSHOT.jar\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/classes/org/example/Main.class\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/maven-archiver/pom.properties\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/../JavaFx_project1/.idea/.gitignore\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/../JavaFx_project1/.idea/encodings.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/../JavaFx_project1/.idea/misc.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/../JavaFx_project1/.idea/vcs.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$/..\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2TKITCRPHyiBdf6yASisi4Bd6IW\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\">{\n  &quot;keyToString&quot;: {\n    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,\n    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,\n    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\n    &quot;last_opened_file_path&quot;: &quot;/home/nines/IdeaProjects/OOP2_UJ/JavaFx_project1&quot;,\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,\n    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;\n  }\n}</component>\n  <component name=\"RecentsManager\">\n    <key name=\"MoveFile.RECENT_KEYS\">\n      <recent name=\"$PROJECT_DIR$/src/main/java\" />\n    </key>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"9221bfc6-c48d-4364-9780-a603184b6923\" name=\"Changes\" comment=\"\" />\n      <created>1690785352856</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1690785352856</updated>\n    </task>\n    <servers />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7ad1690621016d3a193f363fe6d79d10be1272e5)
++++ b/.idea/workspace.xml	(date 1691001779552)
+@@ -4,14 +4,16 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="9221bfc6-c48d-4364-9780-a603184b6923" name="Changes" comment="">
++    <list default="true" id="9221bfc6-c48d-4364-9780-a603184b6923" name="Changes" comment="working on the final project">
+       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/libraries/sqlite_jdbc_3_42_0_0.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/main/databases/hospital.db" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Constants/arr.java" afterDir="false" />
+@@ -26,15 +28,35 @@
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/SettingsWindow.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/healthConditionsWindow.java" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/Final_Project_OOP2-1.0-SNAPSHOT.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Constants/arr.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/Context.class" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/DatabaseHandler.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/insertOrUpdateQueriesBuilder.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/CheckInWindow$healthConditionWindowActivate.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/CheckInWindow.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/MainWindow.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow$ButtonAction.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow.class" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/target/classes/org/example/views/healthConditionsWindow.class" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.gitignore" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.idea/.gitignore" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.idea/encodings.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.idea/misc.xml" afterDir="false" />
+       <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.idea/vcs.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/mvnw" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/mvnw.cmd" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/pom.xml" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/src/main/java/com/example/javafx_project1/HelloApplication.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/src/main/java/com/example/javafx_project1/HelloController.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/src/main/java/module-info.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/../JavaFx_project1/src/main/resources/com/example/javafx_project1/hello-view.fxml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -92,6 +114,19 @@
+       <option name="presentableId" value="Default" />
+       <updated>1690785352856</updated>
+     </task>
++    <task id="LOCAL-00001" summary="working on the final project">
++      <option name="closed" value="true" />
++      <created>1691001779265</created>
++      <option name="number" value="00001" />
++      <option name="presentableId" value="LOCAL-00001" />
++      <option name="project" value="LOCAL" />
++      <updated>1691001779265</updated>
++    </task>
++    <option name="localTasksCounter" value="2" />
+     <servers />
+   </component>
++  <component name="VcsManagerConfiguration">
++    <MESSAGE value="working on the final project" />
++    <option name="LAST_COMMIT_MESSAGE" value="working on the final project" />
++  </component>
+ </project>
+\ No newline at end of file

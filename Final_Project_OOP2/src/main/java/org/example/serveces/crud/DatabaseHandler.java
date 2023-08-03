@@ -34,6 +34,7 @@ public class DatabaseHandler {
             statement.executeUpdate(createSettingsTable);
             statement.executeUpdate(insertDefaultSetting());
             connection.close();
+            new CreateFakeDate();
         }catch(SQLException e){
             System.out.println(e.getMessage());
         }
@@ -132,12 +133,10 @@ public class DatabaseHandler {
     }
 
     static public int[] selectForContext(String query){
-        ResultSet resultSet = null;
-
         try{
             Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
             Statement statement = connection.createStatement();
-            resultSet = statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()){
                 int[] context = {resultSet.getInt("color"), resultSet.getInt("style"), resultSet.getInt("size")};
                 return context;
@@ -147,6 +146,22 @@ public class DatabaseHandler {
         }catch (SQLException e) {
             System.out.println(e.getMessage());
             return null;
+        }
+    }
+
+    static public boolean SelectForAuth(String query){
+        try{
+            Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            if(resultSet.next()){
+                return true;
+            }
+            connection.close();
+            return false;
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+            return false;
         }
     }
 }
