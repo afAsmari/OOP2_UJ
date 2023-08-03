@@ -2,20 +2,22 @@ package org.example.views;
 
 import org.example.Context;
 import org.example.serveces.crud.Auth_service;
+import org.example.CostumeWidgets.*;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class LoginWindow extends JFrame {
-    JLabel emailLabel, passwordLabel;
-    JTextField emailTextField;
-    JPasswordField passwordTextField;
-    JButton loginButton;
+    Label emailLabel, passwordLabel;
+    TextField emailTextField;
+    PasswordField passwordTextField;
+    Button loginButton;
     JPanel mainPanel, topPanel, centerPanel, bottomPanel;
 
-    public LoginWindow (Context context){
+    public LoginWindow (){
         // main configurations
         this.setSize(500,500);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -27,30 +29,15 @@ public class LoginWindow extends JFrame {
         centerPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
         bottomPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 
-        emailLabel = new JLabel("Email: ");
-        passwordLabel = new JLabel("Password: ");
+        emailLabel = new Label("Email: ");
+        passwordLabel = new Label("Password: ");
 
-        emailTextField = new JTextField(10);
-        passwordTextField = new JPasswordField(10);
+        emailTextField = new TextField(10);
+        passwordTextField = new PasswordField(10);
 
-        loginButton = new JButton("Login");
+        loginButton = new Button("Login");
 
         loginButton.addActionListener(new LoginAction());
-
-        emailLabel.setForeground(context.color);
-        emailLabel.setFont(context.font);
-
-        passwordLabel.setForeground(context.color);
-        passwordLabel.setFont(context.font);
-
-        emailTextField.setForeground(context.color);
-        emailTextField.setFont(context.font);
-
-        passwordTextField.setForeground(context.color);
-        passwordTextField.setFont(context.font);
-
-        loginButton.setForeground(context.color);
-        loginButton.setFont(context.font);
 
         topPanel.add(emailLabel);
         topPanel.add(emailTextField);

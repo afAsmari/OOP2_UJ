@@ -32,6 +32,7 @@ public class DatabaseHandler {
             statement.executeUpdate(createPatientsTable);
             String createSettingsTable = createSettingsTable();
             statement.executeUpdate(createSettingsTable);
+            statement.executeUpdate(createPatientsRecord());
             statement.executeUpdate(insertDefaultSetting());
             connection.close();
             new CreateFakeDate();
@@ -67,6 +68,23 @@ public class DatabaseHandler {
                     "style VARCHAR(255) NOT NULL," +
                     "size VARCHAR(255) NOT NULL);"
                 );
+        return query.toString();
+    }
+
+    private String createPatientsRecord(){
+        StringBuilder query = new StringBuilder();
+        query.append("CREATE TABLE IF NOT EXISTS records(" +
+                    "id INTEGER PRIMARY KEY AUTOINCREMENT," +
+                    "first_name VARCHAR(255) NOT NULL," +
+                    "last_name VARCHAR(255) NOT NULL," +
+                    "date_of_birth VARCHAR(255)," +
+                    "gender VARCHAR(255) NOT NULL," +
+                    "address VARCHAR(255)," +
+                    "email VARCHAR(255)," +
+                    "contact_number VARCHAR(255)," +
+                    "emergency_contact VARCHAR(255),"+
+                    "medical_history VARCHAR(1000));"
+        );
         return query.toString();
     }
 
@@ -139,9 +157,10 @@ public class DatabaseHandler {
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()){
                 int[] context = {resultSet.getInt("color"), resultSet.getInt("style"), resultSet.getInt("size")};
+                connection.close();
                 return context;
             }
-            connection.close();
+
             return null;
         }catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -150,18 +169,19 @@ public class DatabaseHandler {
     }
 
     static public boolean SelectForAuth(String query){
+        boolean status = false;
         try{
             Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()){
-                return true;
+                status = true;
             }
             connection.close();
-            return false;
+            return status;
         }catch(SQLException e){
             System.out.println(e.getMessage());
-            return false;
+            return status;
         }
     }
 }

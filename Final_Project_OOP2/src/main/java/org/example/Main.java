@@ -8,8 +8,7 @@ import org.example.views.SettingsWindow;
 public class Main {
     public static void main(String[] args) {
         new DatabaseHandler();
-        Context context = new Context();
-        new ContextRetriever(context);
-        new LoginWindow(context);
+        new ContextRetriever();
+        new LoginWindow();
     }
 }

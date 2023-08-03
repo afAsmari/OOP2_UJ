@@ -2,39 +2,41 @@ package org.example.views;
 
 import org.example.Context;
 import org.example.serveces.crud.insertOrUpdateQueriesBuilder;
+import org.example.CostumeWidgets.*;
 
 import javax.print.attribute.standard.NumberOfInterveningJobs;
 import javax.swing.*;
-import java.awt.*;
+import java.awt.GridLayout;
+import java.awt.FlowLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
 import java.util.Map;
 
 public class SettingsWindow extends JFrame {
-    Context context;
-    JRadioButton black, darkGray, orange;
+    RadioButton black, darkGray, orange;
     ButtonGroup buttonGroup = new ButtonGroup();
     String[] style = {"Plain", "Bold", "Italic"};
     String [] size = {"20", "22", "24", "26", "28"};
-    JComboBox<String> styleComboBox = new JComboBox<>(style);
-    JComboBox<String> sizeComboBox = new JComboBox<>(size);
+    ComboBox styleComboBox = new ComboBox(style);
+    ComboBox sizeComboBox = new ComboBox(size);
     JPanel mainPanel = new JPanel(new GridLayout(2,0));
     JPanel topPanel = new JPanel();
     JPanel radioButtonPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
     JPanel bottomPanel= new JPanel(new FlowLayout(FlowLayout.CENTER));
-    JButton saveButton = new JButton("Save");
-    public SettingsWindow(Context context){
-        this.context = context;
+    Button saveButton = new Button("Save");
+    public SettingsWindow(){
         //main configurations
         this.setSize(300,300);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setTitle("Settings");
 
-        black = new JRadioButton("Black", true);
-        darkGray = new JRadioButton("Dark Gray");
-        orange = new JRadioButton("Orange");
+        black = new RadioButton("Black", true);
+        darkGray = new RadioButton("Dark Gray");
+        orange = new RadioButton("Orange");
         buttonGroup.add(black);
         buttonGroup.add(darkGray);
         buttonGroup.add(orange);
@@ -97,8 +99,8 @@ public class SettingsWindow extends JFrame {
             else if (newColor == 2)
                 color = new Color(255, 200, 0);
 
-            context.color = color;
-            context.font = new Font(Font.SANS_SERIF, newStyle, newSize);
+            Context.color = color;
+            Context.font = new Font(Font.SANS_SERIF, newStyle, newSize);
 
             map.put("color", newColor);
             map.put("style", newStyle);

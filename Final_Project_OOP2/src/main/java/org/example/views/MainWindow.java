@@ -1,32 +1,41 @@
 package org.example.views;
 
-import org.example.Main;
+import org.example.CostumeWidgets.*;
+import org.example.views.subViews.PatientRegistrationForm;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.FlowLayout;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainWindow extends JFrame {
-    JMenuBar menuBar = new JMenuBar();
-    JMenu fileMenu = new JMenu("File");
-    JMenu viewMenu = new JMenu("View");
-    JMenu helpMenu= new JMenu("Help");
+    MenuBar menuBar = new MenuBar();
+    Menu fileMenu = new Menu("File");
+    Menu viewMenu = new Menu("View");
+    Menu helpMenu = new Menu("Help");
+    Menu exitProgram = new Menu("Exit");
 
-    JMenuItem newPatient = new JMenuItem("New Patient Record");
-    JMenuItem openPatient = new JMenuItem("Open Patient Record");
-    JMenuItem printPatient = new JMenuItem("Print Patient Record");
+    MenuItem newPatient = new MenuItem("New Patient Record");
+    MenuItem openPatient = new MenuItem("Open Patient Record");
+    MenuItem printPatient = new MenuItem("Print Patient Record");
 
-    JMenuItem settingMenuItem = new JMenuItem("Change Appearance");
-    JMenuItem changePasswordMenuItem = new JMenuItem("change password");
+    MenuItem settingMenuItem = new MenuItem("Change Appearance");
+    MenuItem changePasswordMenuItem = new MenuItem("change password");
 
-    JMenuItem guideMenuItem = new JMenuItem("User Guide");
-    JMenuItem aboutMenuItem = new JMenuItem("About");
-    JMenuItem contactItem = new JMenuItem("Contact support");
+    MenuItem guideMenuItem = new MenuItem("User Guide");
+    MenuItem aboutMenuItem = new MenuItem("About");
+    MenuItem contactItem = new MenuItem("Contact support");
 
+    MenuItem exitItem = new MenuItem("Exit");
 
     JPanel mainPanel = new JPanel();
+    JPanel bottomPanel = new JPanel();
+    PatientRegistrationForm patientForm = new PatientRegistrationForm();
+
     public MainWindow(){
         // main configurations
-        this.setSize(1600,1000);
+        this.setSize(1000,450);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setTitle("Welcome");
@@ -42,11 +51,30 @@ public class MainWindow extends JFrame {
         helpMenu.add(aboutMenuItem);
         helpMenu.add(contactItem);
 
+        exitProgram.add(exitItem);
+
         menuBar.add(fileMenu);
         menuBar.add(viewMenu);
         menuBar.add(helpMenu);
-        mainPanel.add(menuBar);
+        menuBar.add(exitProgram);
+        mainPanel.setLayout(new BorderLayout());
+        mainPanel.add(menuBar, BorderLayout.NORTH);
+        bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        bottomPanel.add(patientForm);
+        mainPanel.add(bottomPanel, BorderLayout.CENTER);
+
+        exitItem.addActionListener(new ExitProgramAction());
+
+
         this.add(mainPanel);
         this.setVisible(true);
     }
+
+    private static class ExitProgramAction implements ActionListener{
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            System.exit(1);
+        }
+    }
+
 }

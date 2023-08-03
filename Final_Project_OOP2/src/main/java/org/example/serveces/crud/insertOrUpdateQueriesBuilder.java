@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class insertOrUpdateQueriesBuilder {
     static public void insertToPatientsTable(HashMap<String, Object> map){
-        DatabaseHandler.insertOrUpdateQueriesBuilder(map, "INSERT INTO check_ins (");
+        DatabaseHandler.insertOrUpdateQueriesBuilder(map, "INSERT INTO records (");
     }
 
     static public void updateSettingsTable(HashMap<String, Object> map){
