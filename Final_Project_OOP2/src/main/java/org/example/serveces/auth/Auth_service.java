@@ -1,4 +1,6 @@
-package org.example.serveces.crud;
+package org.example.serveces.auth;
+
+import org.example.serveces.crud.DatabaseHandler;
 
 public class Auth_service {
 
@@ -6,7 +8,7 @@ public class Auth_service {
         StringBuilder query = new StringBuilder();
         query.append("SELECT * FROM doctors where email = ").append("'").append(email).append("'").append(" AND password = ").append("'").append(password).append("';");
         boolean loggedIn = DatabaseHandler.SelectForAuth(query.toString());
-        if(loggedIn == true)
+        if(loggedIn)
             return true;
         return false;
     }

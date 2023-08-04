@@ -1,4 +1,4 @@
-package org.example.serveces.crud;
+package org.example.serveces.fake_service;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

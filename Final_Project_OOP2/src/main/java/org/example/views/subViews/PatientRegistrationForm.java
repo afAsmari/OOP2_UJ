@@ -19,7 +19,7 @@ public class PatientRegistrationForm extends JPanel {
     ComboBox genderDropDownMenu;
     TextArea medicalHistoryTextArea;
     Button registerButton;
-    JPanel topPanel, topPanel1, topPanel2, topPanel3, topPanel4, bottomPanel, bottomPanel1, buttonPanel;
+    JPanel topPanel, topPanel1, topPanel2, topPanel3, topPanel4, bottomPanel, bottomPanel1, textAreaPanel, buttonPanel;
 
     public PatientRegistrationForm(){
         this.setLayout(new GridLayout(2, 0));
@@ -62,6 +62,7 @@ public class PatientRegistrationForm extends JPanel {
         topPanel3 = new JPanel();
         topPanel4 = new JPanel();
         bottomPanel1 = new JPanel();
+        textAreaPanel = new JPanel();
         buttonPanel = new JPanel();
 
         // top panel 1 configurations
@@ -94,8 +95,11 @@ public class PatientRegistrationForm extends JPanel {
 
         // bottom panel 1 configurations
         bottomPanel1.setLayout(new GridLayout(2, 0));
-        bottomPanel1.add(medicalHistoryTextArea);
+        bottomPanel1.add(textAreaPanel);
         bottomPanel1.add(buttonPanel);
+        textAreaPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        textAreaPanel.add(medicalHistory);
+        textAreaPanel.add(medicalHistoryTextArea);
         buttonPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         buttonPanel.add(registerButton);
 
@@ -115,16 +119,18 @@ public class PatientRegistrationForm extends JPanel {
 
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            //TODO validation
-            if(firstName.getText() == "")
+            // validation
+            if(firstNameTextField.getText().isEmpty())
                 new ExceptionWindow("enter a first name");
-            else if(firstName.getText().length() > 50)
+            else if(firstNameTextField.getText().length() > 50)
                 new ExceptionWindow("first name should be less than 50");
-            else if(lastName.getText() == "")
+            else if(lastNameTextField.getText().isEmpty())
                 new ExceptionWindow("enter a last name");
-            else if(lastName.getText().length() > 50)
+            else if(lastNameTextField.getText().length() > 50)
                 new ExceptionWindow("last name should be less than 50");
-            //TODO registration
+            else if(contactNumberTextField.getText().isEmpty())
+                new ExceptionWindow("Please provide a contact number");
+            // registration
             HashMap<String, Object> map = new HashMap<>();
             map.put("first_name", firstNameTextField.getText());
             map.put("last_name", lastNameTextField.getText());
@@ -136,7 +142,7 @@ public class PatientRegistrationForm extends JPanel {
             if(!emailTextField.getText().isEmpty())
                 map.put("email", email.getText());
             if(!contactNumberTextField.getText().isEmpty())
-                map.put("contact_number", contactNumberTextField.getAction());
+                map.put("contact_number", contactNumberTextField.getText());
             if(!emergencyContactTextField.getText().isEmpty())
                 map.put("emergency_contact", emergencyContactTextField.getText());
             if(!medicalHistoryTextArea.getText().isEmpty())

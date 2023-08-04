@@ -4,39 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9221bfc6-c48d-4364-9780-a603184b6923" name="Changes" comment="complete the login window">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/Button.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/CheckBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/ComboBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/Label.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/List.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/MenuBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/MenuItem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/PasswordField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/RadioButton.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/TextArea.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/TextField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/PatientRegistrationForm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/ShowRecordsPanel.java" afterDir="false" />
+    <list default="true" id="9221bfc6-c48d-4364-9780-a603184b6923" name="Changes" comment="completed the registration of new patients record">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/ChangePasswordWindow.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/views/SearchRecordWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/databases/hospital.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/databases/hospital.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/databases/hospital.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/Label.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/CostumeWidgets/Label.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/ContextRetriever.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/ContextRetriever.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/Auth_service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/serveces/auth/Auth_service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/CreateFakeDate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/serveces/fake_service/CreateFakeDate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/DatabaseHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/DatabaseHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/insertOrUpdateQueriesBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/serveces/crud/insertOrUpdateQueriesBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/LoginWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/LoginWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/MainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/MainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/SettingsWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/SettingsWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/ContextRetriever.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/ContextRetriever.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/PatientRegistrationForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/PatientRegistrationForm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/ShowRecordsPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/views/subViews/ShowRecordsPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/CostumeWidgets/Label.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/CostumeWidgets/Label.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/Auth_service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/CreateFakeDate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/DatabaseHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/DatabaseHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/insertOrUpdateQueriesBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/serveces/crud/insertOrUpdateQueriesBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/LoginWindow$LoginAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/LoginWindow$LoginAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/LoginWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/LoginWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/MainWindow$ExitProgramAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/MainWindow$ExitProgramAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/MainWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/MainWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow$ButtonAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow$ButtonAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/example/views/SettingsWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/subViews/PatientRegstrionForm$RegistrationAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/example/views/subViews/PatientRegstrionForm.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,28 +106,21 @@
       <option name="project" value="LOCAL" />
       <updated>1691045240804</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="completed the registration of new patients record">
+      <option name="closed" value="true" />
+      <created>1691064148384</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1691064148384</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="working on the final project" />
     <MESSAGE value="complete the login window" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete the login window" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/serveces/crud/DatabaseHandler.java</url>
-          <line>102</line>
-          <option name="timeStamp" value="11" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/example/views/subViews/PatientRegistrationForm.java</url>
-          <line>117</line>
-          <option name="timeStamp" value="12" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="completed the registration of new patients record" />
+    <option name="LAST_COMMIT_MESSAGE" value="completed the registration of new patients record" />
   </component>
 </project>

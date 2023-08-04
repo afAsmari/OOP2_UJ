@@ -1,7 +1,6 @@
 package org.example.views;
 
-import org.example.Context;
-import org.example.serveces.crud.Auth_service;
+import org.example.serveces.auth.Auth_service;
 import org.example.CostumeWidgets.*;
 
 import javax.swing.*;

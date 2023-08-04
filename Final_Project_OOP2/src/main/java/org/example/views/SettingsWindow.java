@@ -29,7 +29,7 @@ public class SettingsWindow extends JFrame {
     Button saveButton = new Button("Save");
     public SettingsWindow(){
         //main configurations
-        this.setSize(300,300);
+        this.setSize(500,500);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setTitle("Settings");

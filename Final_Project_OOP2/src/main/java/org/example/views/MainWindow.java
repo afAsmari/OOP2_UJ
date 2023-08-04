@@ -2,12 +2,14 @@ package org.example.views;
 
 import org.example.CostumeWidgets.*;
 import org.example.views.subViews.PatientRegistrationForm;
+import org.example.views.subViews.ShowRecordsPanel;
 
 import javax.swing.*;
 import java.awt.FlowLayout;
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashMap;
 
 public class MainWindow extends JFrame {
     MenuBar menuBar = new MenuBar();
@@ -16,9 +18,9 @@ public class MainWindow extends JFrame {
     Menu helpMenu = new Menu("Help");
     Menu exitProgram = new Menu("Exit");
 
-    MenuItem newPatient = new MenuItem("New Patient Record");
-    MenuItem openPatient = new MenuItem("Open Patient Record");
-    MenuItem printPatient = new MenuItem("Print Patient Record");
+    MenuItem newPatientItem = new MenuItem("New Patient Record");
+    MenuItem openPatientItem = new MenuItem("Open Patient Record");
+    MenuItem printPatientItem = new MenuItem("Print Patient Record");
 
     MenuItem settingMenuItem = new MenuItem("Change Appearance");
     MenuItem changePasswordMenuItem = new MenuItem("change password");
@@ -30,8 +32,8 @@ public class MainWindow extends JFrame {
     MenuItem exitItem = new MenuItem("Exit");
 
     JPanel mainPanel = new JPanel();
-    JPanel bottomPanel = new JPanel();
-    PatientRegistrationForm patientForm = new PatientRegistrationForm();
+    static JPanel bottomPanel = new JPanel();
+    static PatientRegistrationForm patientForm = new PatientRegistrationForm();
 
     public MainWindow(){
         // main configurations
@@ -40,9 +42,9 @@ public class MainWindow extends JFrame {
         this.setLocationRelativeTo(null);
         this.setTitle("Welcome");
 
-        fileMenu.add(newPatient);
-        fileMenu.add(openPatient);
-        fileMenu.add(printPatient);
+        fileMenu.add(newPatientItem);
+        fileMenu.add(openPatientItem);
+        fileMenu.add(printPatientItem);
 
         viewMenu.add(settingMenuItem);
         viewMenu.add(changePasswordMenuItem);
@@ -63,6 +65,9 @@ public class MainWindow extends JFrame {
         bottomPanel.add(patientForm);
         mainPanel.add(bottomPanel, BorderLayout.CENTER);
 
+        newPatientItem.addActionListener(new newPatientFormAction());
+        openPatientItem.addActionListener(new showRecordAction());
+        settingMenuItem.addActionListener(new openSettingsWindowAction());
         exitItem.addActionListener(new ExitProgramAction());
 
 
@@ -74,6 +79,40 @@ public class MainWindow extends JFrame {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             System.exit(1);
+        }
+    }
+
+    private class newPatientFormAction implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            SwingUtilities.invokeLater(new Runnable() {
+                @Override
+                public void run() {
+                    MainWindow.bottomPanel.remove(0);
+                    MainWindow.bottomPanel.add(patientForm);
+                    MainWindow.bottomPanel.revalidate();
+                    MainWindow.bottomPanel.repaint();
+                    //MainWindow.bottomPanel.invalidate();
+                    //MainWindow.bottomPanel.validate();
+                }
+            });
+        }
+    }
+
+    private static class showRecordAction implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new SearchRecordWindow();
+        }
+    }
+
+    private static class openSettingsWindowAction implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new SettingsWindow();
         }
     }
 

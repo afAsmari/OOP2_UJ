@@ -1,5 +1,7 @@
 package org.example.serveces.crud;
 
+import org.example.serveces.fake_service.CreateFakeDate;
+
 import java.io.File;
 import java.io.IOException;
 import java.sql.*;
@@ -9,9 +11,10 @@ import java.util.Map;
 import static org.example.Constants.arr.healthConditions;
 
 public class DatabaseHandler {
-    Connection connection;
-    Statement statement;
+    static Connection connection;
+    static Statement statement;
 
+    // TODO HUGE PROBLEM closing connection should be in the finally clause
     public DatabaseHandler() {
         // check if the database exists
         String databasePath = "src/main/databases/hospital.db";
@@ -34,10 +37,16 @@ public class DatabaseHandler {
             statement.executeUpdate(createSettingsTable);
             statement.executeUpdate(createPatientsRecord());
             statement.executeUpdate(insertDefaultSetting());
-            connection.close();
             new CreateFakeDate();
         }catch(SQLException e){
             System.out.println(e.getMessage());
+        }finally {
+            try{
+                connection.close();
+            }catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
+
         }
 
 
@@ -81,7 +90,7 @@ public class DatabaseHandler {
                     "gender VARCHAR(255) NOT NULL," +
                     "address VARCHAR(255)," +
                     "email VARCHAR(255)," +
-                    "contact_number VARCHAR(255)," +
+                    "contact_number VARCHAR(255) NOT NULL UNIQUE," +
                     "emergency_contact VARCHAR(255),"+
                     "medical_history VARCHAR(1000));"
         );
@@ -103,13 +112,18 @@ public class DatabaseHandler {
         int status = 0;
         new DatabaseHandler();
         try{
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
-            Statement statement = connection.createStatement();
+            connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
+            statement = connection.createStatement();
             statement.executeUpdate(query);
-            connection.close();
         }catch (SQLException e){
             System.out.println(e.getMessage());
             status = 1;
+        }finally {
+            try{
+                connection.close();
+            }catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
         }
         return status;
     }
@@ -152,8 +166,8 @@ public class DatabaseHandler {
 
     static public int[] selectForContext(String query){
         try{
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
-            Statement statement = connection.createStatement();
+            connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
+            statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()){
                 int[] context = {resultSet.getInt("color"), resultSet.getInt("style"), resultSet.getInt("size")};
@@ -164,15 +178,21 @@ public class DatabaseHandler {
             return null;
         }catch (SQLException e) {
             System.out.println(e.getMessage());
-            return null;
+        }finally {
+            try{
+                connection.close();
+            }catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
         }
+        return null;
     }
 
     static public boolean SelectForAuth(String query){
         boolean status = false;
         try{
-            Connection connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
-            Statement statement = connection.createStatement();
+            connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
+            statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
             if(resultSet.next()){
                 status = true;
@@ -181,7 +201,61 @@ public class DatabaseHandler {
             return status;
         }catch(SQLException e){
             System.out.println(e.getMessage());
-            return status;
+        }finally {
+            try{
+                connection.close();
+            }catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
         }
+        return status;
+    }
+
+    static public HashMap<String, Object> SelectForRecordSearch(String query){
+        HashMap<String, Object> map = new HashMap<>();
+        try{
+            connection = DriverManager.getConnection("jdbc:sqlite:src/main/databases/hospital.db");
+            statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+            if(resultSet.next()){
+                Object firstname = resultSet.getObject("first_name");
+                if(!resultSet.wasNull())
+                    map.put("first_name", firstname);
+                Object lastname = resultSet.getObject("last_name");
+                if(!resultSet.wasNull())
+                    map.put("last_name", lastname);
+                Object dateOfBirth = resultSet.getObject("date_of_birth");
+                if(!resultSet.wasNull())
+                    map.put("date_of_birth", dateOfBirth);
+                Object gender = resultSet.getObject("gender");
+                if(!resultSet.wasNull())
+                    map.put("gender", gender);
+                Object address = resultSet.getObject("address");
+                if(!resultSet.wasNull())
+                    map.put("address", address);
+                Object email = resultSet.getObject("email");
+                if(!resultSet.wasNull())
+                    map.put("email", email);
+                Object contactNumber = resultSet.getObject("contact_number");
+                if(!resultSet.wasNull())
+                    map.put("contact_number", contactNumber);
+                Object emergencyContact = resultSet.getObject("emergency_contact");
+                if(!resultSet.wasNull())
+                    map.put("emergency_contact", emergencyContact);
+                Object medicalHistory = resultSet.getObject("medical_history");
+                if(!resultSet.wasNull())
+                    map.put("medical_history", medicalHistory);
+            }
+            connection.close();
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }finally {
+            try{
+                connection.close();
+            }catch(SQLException e){
+                System.out.println(e.getMessage());
+            }
+        }
+        return map;
     }
 }

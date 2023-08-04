@@ -10,4 +10,8 @@ public class Label extends JLabel {
         setForeground(Context.color);
         setFont(Context.font);
     }
+    public Label(){
+        setForeground(Context.color);
+        setFont(Context.font);
+    }
 }
