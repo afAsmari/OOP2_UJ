@@ -1,5 +1,6 @@
 package org.example.views;
 
+import org.example.Context;
 import org.example.CostumeWidgets.*;
 import org.example.views.subViews.PatientRegistrationForm;
 import org.example.views.subViews.ShowRecordsPanel;
@@ -35,10 +36,14 @@ public class MainWindow extends JFrame {
     static JPanel bottomPanel = new JPanel();
     static PatientRegistrationForm patientForm = new PatientRegistrationForm();
 
+    // mock test
+    HashMap<String, Object> map = new HashMap<>();
+    ShowRecordsPanel showRecordsPanel = new ShowRecordsPanel(map);
+
     public MainWindow(){
         // main configurations
         this.setSize(1000,450);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setTitle("Welcome");
 
@@ -62,16 +67,22 @@ public class MainWindow extends JFrame {
         mainPanel.setLayout(new BorderLayout());
         mainPanel.add(menuBar, BorderLayout.NORTH);
         bottomPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+        showRecordsPanel.setLayout(new FlowLayout());
         bottomPanel.add(patientForm);
         mainPanel.add(bottomPanel, BorderLayout.CENTER);
 
         newPatientItem.addActionListener(new newPatientFormAction());
         openPatientItem.addActionListener(new showRecordAction());
         settingMenuItem.addActionListener(new openSettingsWindowAction());
+        changePasswordMenuItem.addActionListener(new OpenChangePasswordWindow());
+        aboutMenuItem.addActionListener(new OpenAboutWindow());
+        guideMenuItem.addActionListener(new OpenUserGuideWindow());
+        contactItem.addActionListener(new ContactSupportWindow());
         exitItem.addActionListener(new ExitProgramAction());
 
 
         this.add(mainPanel);
+        this.pack();
         this.setVisible(true);
     }
 
@@ -93,6 +104,7 @@ public class MainWindow extends JFrame {
                     MainWindow.bottomPanel.add(patientForm);
                     MainWindow.bottomPanel.revalidate();
                     MainWindow.bottomPanel.repaint();
+                    Context.mainWindow.pack();
                     //MainWindow.bottomPanel.invalidate();
                     //MainWindow.bottomPanel.validate();
                 }
@@ -113,6 +125,38 @@ public class MainWindow extends JFrame {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             new SettingsWindow();
+        }
+    }
+
+    private class OpenChangePasswordWindow implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new ChangePasswordWindow();
+        }
+    }
+
+    private class OpenAboutWindow implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new AboutWindow();
+        }
+    }
+
+    private class OpenUserGuideWindow implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new UserGuideWindow();
+        }
+    }
+
+    private class ContactSupportWindow implements ActionListener{
+
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            new Contact_Support_Window();
         }
     }
 

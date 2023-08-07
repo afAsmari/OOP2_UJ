@@ -56,6 +56,7 @@ public class SettingsWindow extends JFrame {
         mainPanel.add(topPanel);
         mainPanel.add(bottomPanel);
         this.add(mainPanel);
+        this.pack();
         this.setVisible(true);
     }
 

@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f14f0e58-f478-480d-8c31-5072a0ae71a9" name="Changes" comment="new stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/target/classes/org/example/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/target/classes/org/example/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Final_Project_OOP2/target/classes/org/example/views/subViews/ShowRecordsPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Final_Project_OOP2/target/classes/org/example/views/subViews/ShowRecordsPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,13 +32,6 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="workspaceImportEnabled" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="2SyA33DH8uCievjbaRzqZIuy4dB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -50,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "jdk.selected.JAVA_MODULE": "19",
-    "last_opened_file_path": "/home/nines/IdeaProjects/OOP2_UJ/Gui_app6",
+    "last_opened_file_path": "/home/nines/IdeaProjects/OOP2_UJ/Final_Project_OOP2",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",

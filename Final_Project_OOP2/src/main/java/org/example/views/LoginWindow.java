@@ -51,6 +51,7 @@ public class LoginWindow extends JFrame {
         mainPanel.add(bottomPanel);
 
         this.add(mainPanel);
+        this.pack();
         this.setVisible(true);
 
     }

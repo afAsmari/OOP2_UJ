@@ -18,6 +18,7 @@ public class ExceptionWindow extends JFrame {
         mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
         mainPanel.add(exceptionLabel);
         this.add(mainPanel);
+        this.pack();
         this.setVisible(true);
     }
 }

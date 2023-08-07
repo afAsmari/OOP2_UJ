@@ -12,4 +12,9 @@ public class insertOrUpdateQueriesBuilder {
     static public void updateSettingsTable(HashMap<String, Object> map){
         DatabaseHandler.updateATable(map, "UPDATE settings", "id = 1");
     }
+
+    static public void updateDoctorsTable(final HashMap<String, Object> map) {
+        DatabaseHandler.updateATable(map, "UPDATE doctors", "id = 1");
+    }
+
 }

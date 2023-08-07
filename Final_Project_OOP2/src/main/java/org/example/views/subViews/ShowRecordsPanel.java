@@ -1,6 +1,8 @@
 package org.example.views.subViews;
 
 import org.example.CostumeWidgets.Label;
+import org.example.CostumeWidgets.TextArea;
+import org.example.CostumeWidgets.TextField;
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,9 +10,10 @@ import java.util.HashMap;
 
 public class ShowRecordsPanel extends JPanel {
     Label firstName, lastName, dateOfBirth, gender, address, contactNumber, email, emergencyContact, medicalHistory;
-    Label firstNameValue, lastNameValue, dateOfBirthValue,genderValue, addressValue, contactNumberValue, emailValue, emergencyContactValue, medicalHistoryValue;
+    TextField firstNameValue, lastNameValue, dateOfBirthValue,genderValue, addressValue, contactNumberValue, emailValue, emergencyContactValue;
+    TextArea medicalHistoryValue;
 
-    JPanel mainPanel, topPanel1, topPanel2, topPanel3, topPanel4;
+    JPanel mainPanel,secondryPanel, topPanel1, topPanel2, topPanel3, topPanel4, topPanel5;
     public ShowRecordsPanel(HashMap<String, Object> map){
         // initializing of labels
         firstName = new Label("First Name:");
@@ -24,74 +27,85 @@ public class ShowRecordsPanel extends JPanel {
         medicalHistory = new Label("Medical History:");
 
         // initializing of empty labels
-        firstNameValue = new Label("");
-        lastNameValue = new Label("");
-        dateOfBirthValue = new Label("");
-        genderValue = new Label("");
-        addressValue = new Label("");
-        emailValue = new Label("");
-        contactNumberValue = new Label("");
-        emergencyContactValue = new Label("");
-        medicalHistoryValue = new Label("");
+        firstNameValue = new TextField();
+        lastNameValue = new TextField();
+        dateOfBirthValue = new TextField();
+        genderValue = new TextField();
+        addressValue = new TextField();
+        emailValue = new TextField();
+        contactNumberValue = new TextField();
+        emergencyContactValue = new TextField();
+        medicalHistoryValue = new TextArea();
 
         // initializing the other labels
         if(map.get("first_name") != null)
-            firstNameValue = new Label((String) map.get("first-name"));
+            firstNameValue.setText((String) map.get("first_name"));
         if(map.get("last_name") != null)
-            lastNameValue = new Label((String) map.get("last_name"));
+            lastNameValue.setText((String) map.get("last_name"));
         if(map.get("date_of_birth") != null)
-            dateOfBirthValue = new Label((String) map.get("date_of_birth"));
+            dateOfBirthValue.setText((String) map.get("date_of_birth"));
         if(map.get("gender") != null)
-            genderValue = new Label((String) map.get("gender"));
+            genderValue.setText((String) map.get("gender"));
         if(map.get("address") != null)
-            addressValue = new Label((String) map.get("address"));
+            addressValue.setText((String) map.get("address"));
         if(map.get("contact_number") != null)
-            contactNumberValue = new Label((String) map.get("contact_number"));
+            contactNumberValue.setText((String) map.get("contact_number"));
         if(map.get("email") != null)
-            emailValue = new Label((String) map.get("email"));
+            emailValue.setText((String) map.get("email"));
         if(map.get("emergency_contact") != null)
-            emergencyContactValue = new Label((String) map.get("emergency_contact"));
+            emergencyContactValue.setText((String) map.get("emergency_contact"));
         if(map.get("medical_history") != null)
-            medicalHistoryValue = new Label((String) map.get("medical_history"));
+            medicalHistoryValue.setText((String) map.get("medical_history"));
 
         // initializing of second rate panels
         topPanel1 = new JPanel();
         topPanel2 = new JPanel();
         topPanel3 = new JPanel();
         topPanel4 = new JPanel();
+        topPanel5 = new JPanel();
 
-        topPanel1.setLayout(new GridLayout(0, 6));
+        topPanel1.setLayout(new GridLayout(2, 2));
         topPanel1.add(firstName);
         topPanel1.add(firstNameValue);
         topPanel1.add(lastName);
         topPanel1.add(lastNameValue);
-        topPanel1.add(dateOfBirth);
-        topPanel1.add(dateOfBirthValue);
+        topPanel1.setBackground(Color.blue);
 
-        topPanel2.setLayout(new GridLayout(0, 6));
+        topPanel2.setLayout(new GridLayout(2, 2));
         topPanel2.add(address);
         topPanel2.add(addressValue);
         topPanel2.add(email);
         topPanel2.add(emailValue);
-        topPanel2.add(contactNumber);
-        topPanel2.add(contactNumberValue);
+        topPanel2.setBackground(Color.black);
 
-        topPanel3.setLayout(new GridLayout(0, 2));
+        topPanel3.setLayout(new GridLayout(2, 2));
+        topPanel3.add(contactNumber);
+        topPanel3.add(contactNumberValue);
         topPanel3.add(emergencyContact);
         topPanel3.add(emergencyContactValue);
+        topPanel3.setBackground(Color.red);
 
-        topPanel4.setLayout(new FlowLayout(FlowLayout.CENTER));
-        topPanel4.add(medicalHistory);
-        topPanel4.add(medicalHistoryValue);
+        topPanel4.setLayout(new GridLayout(0, 2));
+        topPanel4.add(dateOfBirth);
+        topPanel4.add(dateOfBirthValue);
+        topPanel4.setBackground(Color.green);
 
+        topPanel5.setLayout(new GridLayout(0, 2));
+        topPanel5.add(medicalHistory);
+        topPanel5.add(medicalHistoryValue);
+        topPanel5.setBackground(Color.orange);
+
+        secondryPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
+        secondryPanel.add(topPanel1);
+        secondryPanel.add(topPanel2);
+        secondryPanel.add(topPanel3);
+        secondryPanel.add(topPanel4);
+        secondryPanel.add(topPanel5);
         mainPanel = new JPanel();
-        mainPanel.setLayout(new GridLayout(0, 4));
-        mainPanel.add(topPanel1);
-        mainPanel.add(topPanel2);
-        mainPanel.add(topPanel3);
-        mainPanel.add(topPanel4);
-        this.setLayout(new BorderLayout());
-        this.add(mainPanel, BorderLayout.CENTER);
+        mainPanel.add(secondryPanel);
+
+        this.setLayout(new FlowLayout(FlowLayout.CENTER));
+        this.add(mainPanel);
 
     }
 }

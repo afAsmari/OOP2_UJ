@@ -1,5 +1,6 @@
 package org.example.views;
 
+import org.example.Context;
 import org.example.CostumeWidgets.Button;
 import org.example.CostumeWidgets.Label;
 import org.example.CostumeWidgets.TextField;
@@ -56,7 +57,7 @@ public class SearchRecordWindow extends JFrame {
             else{
                 // TODO passing query
                 StringBuilder query = new StringBuilder();
-                query.append("SELECT * FROM records WHERE contact_number = ").append(contactNumberTextField.getText()).append(";");
+                query.append("SELECT * FROM records WHERE contact_number = '").append(contactNumberTextField.getText()).append("';");
                 SearchRecordWindow.map = SelectForRecordSearch(query.toString());
                 swapPanel();
             }
@@ -69,6 +70,7 @@ public class SearchRecordWindow extends JFrame {
                     MainWindow.bottomPanel.add(new ShowRecordsPanel(SearchRecordWindow.map));
                     MainWindow.bottomPanel.revalidate();
                     MainWindow.bottomPanel.repaint();
+                    Context.mainWindow.pack();
                     //MainWindow.bottomPanel.invalidate();
                     //MainWindow.bottomPanel.validate();
                 }

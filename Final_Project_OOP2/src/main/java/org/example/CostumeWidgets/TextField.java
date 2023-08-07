@@ -10,4 +10,11 @@ public class TextField extends JTextField {
         setForeground(Context.color);
         setFont(Context.font);
     }
+    public TextField(){
+        setColumns(8);
+        setEditable(false);
+        setForeground(Context.color);
+        setFont(Context.font);
+
+    }
 }
